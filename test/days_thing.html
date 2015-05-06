@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        *{margin: 0}
+        .float_modal{width :480px; font-family:"Microsoft YaHei"; font-size: 12px;font-weight: normal; border:1px solid #cfcfcf;box-shadow: 0 1px 2px 2px #e2e2e2; border-radius: 2px;
+            margin-left: 50px;  margin-top: 50px;
+        }
+        .float_modal_title{height:54px;border-bottom: 1px dashed;border-color: #cfcfcf  }
+        .float_modal h4{text-align: center;font-size:16px;font-weight: normal;  }
+        .day_image{padding-left: 0;;  list-style-type: none;  }
+        .day_image li{border-bottom: 1px solid #cfcfcf;  }
+        .day:hover{background-color: #efeff4;cursor: pointer;}
+        .day img{float: right;}
+        .image{display: none;  }
+        .day,.float_modal_title{height: 20px;  padding: 17px;  }
+        .day a{width: 100%;margin-left: 15px;color: #766E66}
+        .image{padding: 15px;  }
+        .last image{border-bottom: none;  }
+        .open{background-color: #efeff4;  }
+    </style>
+    <title>日通告浮动层</title>
+</head>
+<body>
+    <div class="float_modal">
+        <div class="float_modal_title">
+            <h4>日通告</h4>
+        </div>
+
+        <ul class="day_image">
+
+            <li class="day"><a>2015-4-29（今天）<img src="down.png"/><img src="up.png" style="display: none"/> </a></li>
+            <li class="image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-28（昨天）<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-27<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-26<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-25<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-24<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-23<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image last_image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-22<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image last_image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+            <li class="day"><a>2015-4-21<img src="down.png"/><img src="up.png" style="display: none"/></a></li>
+            <li class="image last_image">
+                <div>
+                    <img src="1.png" />
+                    <img src="2.png" />
+                </div>
+            </li>
+        </ul>
+        <SCRIPT language="JavaScript">
+            $(document).ready(function(){
+                $(".day").click(function(){
+                    $(".open").removeClass("open");
+                    $(this).addClass("open");
+                    $(this).children("a").children("img").toggle();
+                    $(this).next(".image").toggle();
+                })
+            });
+        </SCRIPT>
+
+
+    </div>
+
+
+</body>
+</html>
